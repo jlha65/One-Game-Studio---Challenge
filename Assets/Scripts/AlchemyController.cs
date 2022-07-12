@@ -88,7 +88,7 @@ public class AlchemyController : MonoBehaviour
                 res += "de tipo 3";
                 break;
         }
-        Debug.Log(res);
+        //Debug.Log(res);
 
         //Lock UI for a few seconds
         StartCoroutine(ExecuteAfterTime(3.0f, res));

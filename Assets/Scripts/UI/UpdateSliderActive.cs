@@ -22,7 +22,7 @@ public class UpdateSliderActive : MonoBehaviour
 
     void OnActiveMenuChange(int newVal)
     {
-        Debug.Log(newVal);
+        //Debug.Log(newVal);
         if (newVal == indexWhereActive)
         {
             gameObject.SetActive(true);

@@ -92,8 +92,6 @@ public class MenusController : MonoBehaviour
 
     public void setRadialMenuChoice(int choice)
     {
-        Debug.Log(choice / 10 - 1);
-        Debug.Log(choice % 10);
         radialMenuChoices[choice / 10 - 1] = choice % 10;
     }
 

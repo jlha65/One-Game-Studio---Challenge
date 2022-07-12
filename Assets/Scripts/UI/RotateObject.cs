@@ -49,7 +49,6 @@ public class RotateObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     public void OnEndDrag(PointerEventData eventData)
     {
         //Debug.Log("End drag");
-        Debug.Log(Mathf.Round(transform.rotation.eulerAngles.z / degreeSnap) * degreeSnap);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, Mathf.Round(transform.rotation.eulerAngles.z / degreeSnap) * degreeSnap);
     }
 

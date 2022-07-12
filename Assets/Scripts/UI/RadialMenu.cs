@@ -41,6 +41,7 @@ public class RadialMenu : MonoBehaviour
             }
             //Debug.Log(activeElement);
 
+            //When we detect the user dragging
             if (Input.GetMouseButtonDown(0))
             {
                 radialMenuElements[activeElement].gameObject.SetActive(false);
