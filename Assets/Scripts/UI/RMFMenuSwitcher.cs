@@ -12,35 +12,26 @@ public class RMFMenuSwitcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dependsOn.OnVariableChange += updateActiveMenu;
+        dependsOn.OnVariableChange += UpdateActiveMenu;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //updateActiveMenu();
+        //UpdateActiveMenu();
     }
 
-    private void updateActiveMenu(int newVal)
+    private void UpdateActiveMenu(int newVal)
     {
         for (int i = 0; i < menus.Count; i++)
         {
-            //if (menusController.currentActiveMenu + 1 == menuIndex)
-            //{
-            //    menus[i].gameObject.SetActive(false);
-            //}
-            //if (dependsOn.currentTopElement == i)
-            //{
-            //    menusController.radialMenus[menuIndex] = menus[i];
-            //    rotateScript.degreeSnap = 360 / menus[i].elements.Count;
-            //    //menusController.setCurrentActiveMenu(menusController.currentActiveMenu);
-            //}
             menus[i].gameObject.SetActive(false);
         }
 
         Debug.Log("Changing active submenu");
         menusController.radialMenus[menuIndex] = menus[newVal];
         rotateScript.degreeSnap = 360 / menus[newVal].elements.Count;
+        transform.localRotation = Quaternion.identity;
         menusController.setCurrentActiveMenu(menusController.currentActiveMenu);
 
     }

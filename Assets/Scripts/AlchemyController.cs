@@ -12,6 +12,7 @@ public class AlchemyController : MonoBehaviour
     public Image menuBlockPanel;
     public ConfirmPanelController confirmPanel;
     public TextMeshProUGUI text;
+    public AudioSource asAlchemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +101,7 @@ public class AlchemyController : MonoBehaviour
     public void PlayAnimation()
     {
         ps.Play();
+        asAlchemy.Play();
     }
 
     IEnumerator ExecuteAfterTime(float time, string res)

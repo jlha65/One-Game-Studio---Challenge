@@ -11,13 +11,15 @@ public class MenusController : MonoBehaviour
         get { return m_currentActiveMenu; }
         set
         {
-            m_currentActiveMenu = value;
-            if (OnVariableChange != null)
+            if (m_currentActiveMenu != value)
             {
-                OnVariableChange(m_currentActiveMenu);
-                Debug.Log("Variable changed: " + OnVariableChange.ToString());
-            }
-                
+                m_currentActiveMenu = value;
+                if (OnVariableChange != null)
+                {
+                    OnVariableChange(m_currentActiveMenu);
+                    Debug.Log("Variable changed: " + OnVariableChange.ToString());
+                }
+            }  
         }
     }
 
